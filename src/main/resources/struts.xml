@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+    "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <!-- 把 bean 的创建交给 spring 来做 -->
+    <constant name="struts.objectFactory" value="spring" />
+   
+    <package name="base" extends="struts-default,json-default" >
+        <!-- 可以不使用 intrceptors 拦截
+	    <interceptors>
+	        <interceptor-stack name="avatarInterceptorStack">
+		        <interceptor-ref name="fileUpload">
+			        <param name="maximumSize">20971520</param>
+			        <param name="allowedExtensions">png,jpg</param>
+			    </interceptor-ref>
+			    <interceptor-ref name="defaultStack"></interceptor-ref>
+	        </interceptor-stack>
+	    </interceptors> -->
+    </package>
+    
+    
+</struts>

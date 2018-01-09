@@ -1,0 +1,20 @@
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<property name="dialect">org.hibernate.dialect.H2Dialect</property>
+		<property name="show_sql">true</property>
+		<property name="format_sql">true</property>
+		<property name="cache.use_second_level_cache">false</property>
+		<property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>
+		<property name="max_fetch_depth">2</property>
+		<property name="cache.provider_class">org.hibernate.cache.EhCacheProvider</property>
+		<property name="connection.autocommit">true</property>
+		<property name="cache.provider_configuration_file_resource_path">ehcache-hibernate.xml</property>
+		<property name="hbm2ddl.auto">update</property>
+
+		
+
+	</session-factory>
+</hibernate-configuration>
